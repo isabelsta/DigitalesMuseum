@@ -31,7 +31,7 @@
                         <h3 class="panel-title">Anmelden</h3>
                     </div>
                     <div class="panel-body">
-                        <form accept-charset="UTF-8" role="form" action="login.php" method="post">
+                        <form accept-charset="UTF-8" role="form" action="start.php" method="post">
                             <fieldset>
                                 <div class="form-group">
                                     <label for="userName">Nutzername:</label>
