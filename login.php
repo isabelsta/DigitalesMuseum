@@ -66,15 +66,18 @@ require("navbar.php");
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
-            <img src="sdp_klein.jpg" alt="Los Angeles">
+            <img src="Cohn-2.jpg" width="60%" height="80%" style="margin:0 auto;">
         </div>
 
         <div class="item">
-            <img src="sdp_klein.jpg" alt="Chicago">
+            <img src="Montessori-2.jpg"  width="60%" height="80%" style="margin:0 auto;">
         </div>
 
         <div class="item">
-            <img src="bild.jpeg" alt="New York">
+            <img src="Pappenheim-2.jpg" width="60%" height="80%" style="margin:0 auto;">
+        </div>
+        <div class="item">
+            <img src="Winkler-2.jpg" width="60%" height="80%" style="margin:0 auto;">
         </div>
     </div>
 
