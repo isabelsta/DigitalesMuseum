@@ -13,7 +13,7 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="login.php">Digitales Museum</a>
+        <a class="navbar-brand" href="start.php">Digitales Museum</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
@@ -28,7 +28,7 @@
           <li><a href="./kategorie.php">Kategorie</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="./login.php">Abmelden</a></li>
+          <li><a href="start.php">Abmelden</a></li>
         </ul>
       </div>
     </div>

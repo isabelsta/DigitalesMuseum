@@ -13,7 +13,7 @@ if(!isset($_SESSION['login'])){
         $res = mysqli_query($my_db, $sql);
         $res = mysqli_fetch_assoc($res);
 
-        if (password_verify($pas, $res['password'])) {
+        if ($pas === $res['password']) {
             // login erfolgreich
             $sql = "SELECT username FROM benutzer WHERE username='" . $login . "'";
             $res = mysqli_query($my_db, $sql);
