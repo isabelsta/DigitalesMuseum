@@ -1,0 +1,22 @@
+body{
+  font-family:'Balloon';
+  color: #B88D81;
+  background-color: #FFEFE2;
+}
+
+h1{
+  text-align: center;
+}
+
+.panel-heading{
+  color: #B88D81;
+  background-color: #F0B3A6;
+}
+
+.panel-body{
+  background-color: #F0B3A6;
+}
+
+.col-md-4 {
+  text-align: center;
+}
