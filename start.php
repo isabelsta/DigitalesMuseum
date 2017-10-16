@@ -55,12 +55,18 @@ if(!isset($_SESSION['login'])){
 require("navbar.php");
 ?>
 
+
+<br>
+<br>
+<br>
+<br>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -76,6 +82,7 @@ require("navbar.php");
         <div class="item">
             <img src="Pappenheim-2.jpg" width="60%" height="80%" style="margin:0 auto;">
         </div>
+
         <div class="item">
             <img src="Winkler-2.jpg" width="60%" height="80%" style="margin:0 auto;">
         </div>
