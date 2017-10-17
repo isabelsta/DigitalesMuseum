@@ -1,39 +1,3 @@
-
-<?php
-session_start();
-require("dba.php");
-//login check
-
-if(!isset($_SESSION['login'])){
-    if (isset($_REQUEST['login']) && isset($_REQUEST['password'])) {
-        //Benutzer verifikation
-        $login = mysqli_real_escape_string($my_db, htmlentities($_REQUEST['login']));
-        $pas = mysqli_real_escape_string($my_db, htmlentities($_REQUEST['password']));
-        $sql = "SELECT * FROM benutzer WHERE username='" . $login . "'";
-        $res = mysqli_query($my_db, $sql);
-        $res = mysqli_fetch_assoc($res);
-
-        if ($pas === $res['password']) {
-            // login erfolgreich
-            $sql = "SELECT username FROM benutzer WHERE username='" . $login . "'";
-            $res = mysqli_query($my_db, $sql);
-            $row = mysqli_fetch_array($res);
-            $_SESSION['login'] = $row['username'];
-
-            session_regenerate_id();
-        } else {
-            echo "Fehler";
-            header("Location: index.php?error=login");
-            die();
-        }
-    } else {
-        //Weiterleitung auf log-in Seite
-        header("Location: index.php");
-        die();
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
