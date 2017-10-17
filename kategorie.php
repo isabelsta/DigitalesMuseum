@@ -32,18 +32,24 @@
     <div class="container">
       <div class="row">
           <div class="col-md-4">
-            <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
-            <h4 align="center"> Kategorie 1 </h4>
+              <a href="#" id="personen" onclick="document.location=this.id+'.php';return false;" >
+                <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
+              </a>
+            <h4 align="center"> Klassiker </h4>
           </div>
 
           <div class="col-md-4">
-            <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
-            <h4 align="center"> Kategorie 2</h4>
+              <a href="#" id="personen" onclick="document.location=this.id+'.php';return false;" >
+                <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
+              </a>
+            <h4 align="center"> Professionalisierung </h4>
           </div>
 
           <div class="col-md-4">
-            <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
-            <h4 align="center"> Kategorie 3 </h4>
+              <a href="#" id="personen" onclick="document.location=this.id+'.php';return false;" >
+                <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
+              </a>
+            <h4 align="center"> Wissenschaft </h4>
           </div>
 
       </div>

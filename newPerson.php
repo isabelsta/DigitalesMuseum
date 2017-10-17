@@ -49,32 +49,23 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="gebDat">Geburtsdatum: *</label>
-                                        <input type="text" placeholder="Geburtsdatum"
+                                        <input type="text" placeholder="dd-mm-yyyy"
                                                class="form-control"
                                                name="gebDat" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="todDat">Todesdatum: *</label>
-                                        <input type="text" placeholder="Todesdatum"
+                                        <input type="text" placeholder="dd-mm-yyyy"
                                                class="form-control"
-                                               name="todDat" required>
+                                               name="todDat">
                                     </div>
                                     <div class="form-group">
-                                        <label for="kategorie">Kategorie: *</label><br>
-                                          <input type="radio" id="vi" name="Zahlmethode" value="Kat1">
-                                          <label for="k1">Kategorie 1</label><br>
-                                          <input type="radio" id="vi" name="Zahlmethode" value="Kat2">
-                                          <label for="k2">Kategorie 2</label><br>
-                                          <input type="radio" id="ae" name="Zahlmethode" value="Kat3">
-                                          <label for="k3">Kategorie 3</label>
+                                        <label for="literatur">Literatur: *</label>
+                                        <input type="text" placeholder="Literatur" class="form-control" name="literatur">
                                     </div>
                                     <div class="form-group">
                                         <label for="text">Text: *</label>
                                         <textarea name="text" cols="35" rows="4" required></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="literatur">Literatur: *</label>
-                                        <input type="file" name="literatur" accept="application/pdf">
                                     </div>
                                     <div class="form-group">
                                         <label for="film">Film:</label>
@@ -87,6 +78,15 @@
                                     <div class="form-group">
                                         <label for="bild">Bild:</label>
                                         <input type="file" accept="image/*" name="bild_daten">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="kategorie">Kategorie: *</label><br>
+                                        <input type="radio" id="kat1" name="Kategorie" value="Kla" checked>
+                                        <label for="k1">Klassiker</label><br>
+                                        <input type="radio" id="kat2" name="Kategorie" value="Pro">
+                                        <label for="k2">Professionalisierung</label><br>
+                                        <input type="radio" id="kat3" name="Kategorie" value="Wis">
+                                        <label for="k3">Wissenschaft</label>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn">Pers&ouml;nlichkeit hinzuf&uuml;gen</button>
