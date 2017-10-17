@@ -3,7 +3,7 @@ require("dba.php");
 session_start();
 
 //login check
-/*if(!isset($_SESSION['login'])){
+if(!isset($_SESSION['login'])){
     if ($_REQUEST['login']!=NULL && $_REQUEST['password']!=NULL) {
         //Benutzer verifikation
         $login = mysqli_real_escape_string($my_db, htmlentities($_REQUEST['login']));
@@ -32,7 +32,7 @@ session_start();
     }
 
 
-}*/
+}
 
 ?>
 
