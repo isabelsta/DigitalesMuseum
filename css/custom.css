@@ -8,6 +8,17 @@ h1{
   text-align: center;
 }
 
+.navbar{
+  background-color: #b88d81;
+  color: black;
+  border-color: black;
+}
+
+.dropdown-menu{
+  background-color: #b88d81;
+  color: black;
+}
+
 .panel-heading{
   color: #B88D81;
   background-color: #F0B3A6;
@@ -19,4 +30,32 @@ h1{
 
 .col-md-4 {
   text-align: center;
+}
+
+.img-thumbnail{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text{
+  font-size: 25px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.literatur{
+  font-size: 20px;
+}
+
+.btn{
+  margin-right: 10px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #FFEFE2;
+  background-color: #A37774;
+}
+
+.btn-right{
+  float: right;
 }

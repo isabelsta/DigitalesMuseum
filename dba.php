@@ -9,6 +9,6 @@
 $sqlhost = "localhost";
 $sqluser = "david";
 $sqlpass = "david";
-$dbname  = "museum2";
+$dbname  = "museum";
 
 $my_db = mysqli_connect($sqlhost, $sqluser, $sqlpass, $dbname) or die ("DB-system nicht verfügbar");
