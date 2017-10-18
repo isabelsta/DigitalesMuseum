@@ -34,7 +34,7 @@
                         <form accept-charset="UTF-8" role="form" action="start.php" method="post">
                             <fieldset>
                                 <div class="form-group">
-                                    <label for="userName">Nutzername:</label>
+                                    <label for="login">Nutzername:</label>
                                     <input type="text" placeholder="Nutzername eingeben"
                                            class="form-control"
                                            name="login">
