@@ -18,7 +18,7 @@
       <?php
       if (isset($_REQUEST['error'])) {
           if ($_REQUEST['error'] == 'login') {
-              echo "<div class='alert alert-danger'>Du hast deinen Benutzernamen oder dein Passwort falsch eingegeben!</div>";
+              echo "<div class='alert alert-danger'>Du hast deinen Nutzernamen oder dein Passwort falsch eingegeben!</div>";
           }
       }
       ?>
@@ -35,7 +35,7 @@
                         <form accept-charset="UTF-8" role="form" action="start.php" method="post">
                             <fieldset>
                                 <div class="form-group">
-                                    <label for="userName">Nutzername:</label>
+                                    <label for="login">Nutzername:</label>
                                     <input type="text" placeholder="Nutzername eingeben"
                                            class="form-control"
                                            name="login">

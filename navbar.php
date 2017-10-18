@@ -12,10 +12,10 @@
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="start.php">Digitales Museum</a>
-      </div>
       <div id="navbar" class="navbar-collapse collapse">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="start.php">Digitales Museum</a>
+        </div>
         <ul class="nav navbar-nav">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Personen <span class="caret"></span></a>
@@ -24,11 +24,19 @@
               <li><a href="./newPerson.php">Persönlichkeit hinzufügen</a></li>
             </ul>
           </li>
-          <li><a href="./zeitstrahl.php">Zeitstrahl</a></li>
-          <li><a href="./kategorie.php">Kategorie</a></li>
+          <li><a href="zeitstrahl.php">Zeitstrahl</a></li>
+          <li><a href="kategorie.php">Kategorie</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="start.php">Abmelden</a></li>
+            <a class="navbar-brand" href="#">
+                <?php
+                //anzeigen des Nutzernamen, der in der Session steht (also wer angemeldet ist)
+                if(isset($_SESSION['login'])) {
+                    echo "Hallo " . $_SESSION['login'] . "! ";
+                }
+                ?>
+            </a>
+          <li><a href="index.php">Abmelden</a></li>
         </ul>
       </div>
     </div>
