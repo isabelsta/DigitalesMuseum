@@ -21,6 +21,8 @@
     <br/>
     <br/>
     <br/>
+    <h1>Maria Montessori</h1>
+    <br/>
     <div class="Container">
         <img src="Montessori_Poster.png" alt="Poster von Montessori" class="img-thumbnail">
     </div>
@@ -51,5 +53,8 @@
           <h4 align="left" class="text-center text"> Weitere Literatur </h4>
         </a>
     </div>
+    <br/>
+    <button type="button" id="Pbearbeiten" class="btn-group btn btn-right">Persönlichkeit bearbeiten</button>
+    <button type="button" id="Ploeschen" class="btn-group btn btn-right">Persönlichkeit löschen</button>
   </body>
 </html>

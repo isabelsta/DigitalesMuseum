@@ -8,6 +8,17 @@ h1{
   text-align: center;
 }
 
+.navbar{
+  background-color: #b88d81;
+  color: black;
+  border-color: black;
+}
+
+.dropdown-menu{
+  background-color: #b88d81;
+  color: black;
+}
+
 .panel-heading{
   color: #B88D81;
   background-color: #F0B3A6;
@@ -35,4 +46,16 @@ h1{
 
 .literatur{
   font-size: 20px;
+}
+
+.btn{
+  margin-right: 10px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #FFEFE2;
+  background-color: #A37774;
+}
+
+.btn-right{
+  float: right;
 }
