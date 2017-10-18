@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
 body{
   font-family:'Balloon';
   color: #B88D81;
@@ -8,10 +10,37 @@ h1{
   text-align: center;
 }
 
+textarea{
+  width: 100%;
+  height: 200px;
+}
+
+.navbar-brand{
+  font-size: 22px;
+}
+
 .navbar{
+  font-size: 18px;
   background-color: #b88d81;
   color: black;
   border-color: black;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a{
+  color: #3e3d3d;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a:hover{
+  color: black;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover{
+  background-color: #9b6252b3;
+  color: black;
 }
 
 .dropdown-menu{
@@ -19,17 +48,30 @@ h1{
   color: black;
 }
 
-.panel-heading{
-  color: #B88D81;
-  background-color: #F0B3A6;
+.dropdown-menu > li > a:hover{
+  background-color: #b88d81;
+  color: black;
 }
 
 .panel-body{
-  background-color: #F0B3A6;
+  background-color: #b88d81;
+  color: #3e3d3d;
 }
 
 .col-md-4 {
   text-align: center;
+}
+
+.col-custom{
+  width: 50%;
+  margin-left: 25%;
+}
+
+.form-control-custom{
+  width: 80%;
+  margin: 0 auto;
+  float: none;
+  margin-top: 2px;
 }
 
 .img-thumbnail{
@@ -51,6 +93,7 @@ h1{
 .btn{
   margin-right: 10px;
   margin-bottom: 30px;
+  margin-top: 10px;
   font-size: 20px;
   color: #FFEFE2;
   background-color: #A37774;
@@ -60,7 +103,13 @@ h1{
   float: right;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+.btn-form{
+  margin-right: 10px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  color: #FFEFE2;
+  background-color: #A37774;
+}
 
 * {
   pading: 0;
