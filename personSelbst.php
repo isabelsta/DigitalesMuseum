@@ -27,7 +27,7 @@
        // echo $person;
        //alle infos zur person in ein array laden
         $sql = "SELECT persoenlichkeit.PID, persoenlichkeit.vorname, persoenlichkeit.name, persoenlichkeit.geb, persoenlichkeit.tod,
-                zitat.quelle, zitat.inhalt, text.inhalt
+                zitat.quelle, zitat.inhalt, text.inhalt, film.titel, film.jahr, film.dauer, film.url
                 FROM persoenlichkeit, hat_medium, bild, poster, film, zitat, gehoert_zu, kategorie, text
                 WHERE persoenlichkeit.PID = '".$person."'
                 AND hat_medium.PID = persoenlichkeit.PID 
@@ -67,6 +67,15 @@
                 //langer text
                 printf("%s", $item['7']);
             ?>
+          <br/>
+          <br/>
+          <?php
+            //video
+            define('SITELINK', $item['11']);
+            printf("%s, %s (%s): ", $item['8'], $item['9'], $item['10']);
+            echo "<a href=".$item['11'].">Zum Video</a>";
+
+          ?>
           <br/>
           <br/>
       </p>
