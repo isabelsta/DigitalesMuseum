@@ -22,7 +22,7 @@ $(document).ready(function(){
 
         $('.remove-me').click(function(e){
             e.preventDefault();
-            var fieldNum = this.id.charAt(this.id.length-1);
+            var fieldNum = parseInt(this.id.charAt(this.id.length-1))+1;
             var fieldID = "#ltitel" + fieldNum;
             var stadtID = "#lstadt" + fieldNum;
             var verlagID = "#lverlag" + fieldNum;
