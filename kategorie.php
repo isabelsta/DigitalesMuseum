@@ -35,21 +35,21 @@
               <a href="#" id="personen" onclick="document.location=this.id+'.php';return false;" >
                 <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
               </a>
-            <h4 align="center"> Klassiker </h4>
+            <h2 align="center"> Klassiker </h2>
           </div>
 
           <div class="col-md-4">
               <a href="#" id="personen" onclick="document.location=this.id+'.php';return false;" >
                 <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
               </a>
-            <h4 align="center"> Professionalisierung </h4>
+            <h2 align="center"> Professionalisierung </h2>
           </div>
 
           <div class="col-md-4">
               <a href="#" id="personen" onclick="document.location=this.id+'.php';return false;" >
                 <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
               </a>
-            <h4 align="center"> Wissenschaft </h4>
+            <h2 align="center"> Wissenschaft </h2>
           </div>
 
       </div>

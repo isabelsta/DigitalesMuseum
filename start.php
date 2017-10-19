@@ -57,8 +57,6 @@ if(!isset($_SESSION['login'])){
 <?php
 require("navbar.php");
 ?>
-
-
 <br>
 <br>
 <br>
