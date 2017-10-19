@@ -71,25 +71,20 @@ require("navbar.php");
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
-
+    <?php
+        require("dba.php");
+        $sql = "SELECT * FROM poster";
+        $res = mysqli_query($my_db, $sql);
+        $row = mysqli_fetch_all($res);
+        foreach($row as $item){
+    ?>
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
-            <img src="Cohn-2.jpg" width="60%" height="80%" style="margin:0 auto;">
-        </div>
-
-        <div class="item">
-            <img src="Montessori-2.jpg"  width="60%" height="80%" style="margin:0 auto;">
-        </div>
-
-        <div class="item">
-            <img src="Pappenheim-2.jpg" width="60%" height="80%" style="margin:0 auto;">
-        </div>
-
-        <div class="item">
-            <img src="Winkler-2.jpg" width="60%" height="80%" style="margin:0 auto;">
+            <img src="poster.php?PID=<?=$item['0']?>" width="60%" height="80%" style="margin:0 auto;">
         </div>
     </div>
+        <?php } ?>
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">

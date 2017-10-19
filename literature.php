@@ -17,6 +17,16 @@
   <body>
     <?php
       require("./navbar.php");
+      require("dba.php");
+      $person = $_GET["PID"];
+      $sql = "SELECT literatur.autor, literatur.titel, literatur.stadt, literatur.verlag, literatur.auflage, literatur.seiten
+                FROM literatur, ueber
+                WHERE ueber.LID = literatur.LID
+                AND ueber.PID = '".$person."'";
+    $res = mysqli_query($my_db, $sql);
+    $row = mysqli_fetch_all($res);
+
+
     ?>
     <br/>
     <br/>
@@ -24,53 +34,14 @@
     <div class="Container">
         <h3><b>Literatur</b></h3>
         <p class="literatur">
+            <?php
+            foreach($row as $item) {
+                printf("%s: %s, %s, %s (%s. Auflage), %s Seiten", $item['0'], $item['1'], $item['2'], $item['3'], $item['4'], $item['5']);
+            echo "<br/>";
+            echo "<br/>";
+            }
+                ?>
             <br/>
-            Böhm, Winfried 2003:  Maria Montessori. In: Tenorth, Heinz Elmar (Hrsg.): Klassiker der Pädagogik Bd.2, S. 74-88. München.
-            <br/>
-            <br/>
-            Böhm, Winfried 2010: Maria Montessori. Einführung mit zentralen Texten. Paderborn.
-            <br/>
-            <br/>
-            Böhm, Winfried 2012: Die Reformpädagogik. Montessori, Waldorf und andere Lehren.  München.
-            <br/>
-            <br/>
-            Hebenstreit, Sigurd 1999: Maria Montessori – Eine Einführung in ihr Leben und Werk, Freiburg.
-            <br/>
-            <br/>
-            Heiland, Helmut 1991: Maria Montessori. Hamburg.
-            <br/>
-            <br/>
-            Klein-Landeck, Michael; Pütz, Tanja 2013: Montessori-Pädagogik. Einführung in Theorie und Praxis. Freiburg, 3. Auflage.
-            <br/>
-            <br/>
-            Klein-Landeck, Michael (Hrsg.) 2015: Fragen an Maria Montessori. Immer noch ihrer Zeit voraus? Freiburg.
-            <br/>
-            <br/>
-            Leenders, Hélène 2001: Der Fall Montessori. Die Geschichte einerreformpädagogischen Erziehungskonzeption im italienischen Faschismus. Bad Heilbrunn.
-            <br/>
-            <br/>
-            Montessori, Maria 1965: Grundlagen meiner Pädagogik. Heidelberg.
-            <br/>
-            <br/>
-            Montessori, Maria 1973: Frieden und Erziehung. Freiburg.
-            <br/>
-            <br/>
-            Montessori, Maria 1988: Kosmische Erziehung. Freiburg.
-            <br/>
-            <br/>
-            Montessori, Maria 2010: Die Entdeckung des Kindes. Hg. von Prof. Dr. Harald Ludwig. Gesammelte Werke. Freiburg Band 1.
-            <br/>
-            <br/>
-            Montessori, Maria 2010: Erziehung und Gesellschaft. Hg. von Prof. Dr. Harald Ludwig. Gesammelte Werke. Freiburg Band 3.
-            <br/>
-            <br/>
-            Montessori, Maria 2010: Praxishandbuch der Montessori-Methode. Hg. von Prof. Dr. Harald Ludwig. Gesammelte Werke. Freiburg Band 4.
-            <br/>
-            <br/>
-            Skiera, Ehrenhard 2010: Reformpädagogik in Geschichte und Gegenwart. Einekritische Einführung. München (2. Auflage).
-            <br/>
-            <br/>
-            Ullmann, Monika; Hirschmann, Alexandra 2009: Auf den Spuren Maria Montessoris. Ihre Lebensgeschicht–erzählt für Kinder.
         </p>
     </div>
   </body>
