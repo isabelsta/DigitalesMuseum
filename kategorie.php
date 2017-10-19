@@ -45,7 +45,7 @@
               <a href="personen.php?KID=<?=$item['0']?>">
                   <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
               </a>
-              <h4 align="center"><?php printf("%s", $item['1']); ?> </h4>
+              <h2 align="center"><?php printf("%s", $item['1']); ?> </h2>
           </div>
 
 
