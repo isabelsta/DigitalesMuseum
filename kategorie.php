@@ -29,31 +29,29 @@
     <br />
     <br />
 
+    <?php
+        require("dba.php");
+
+    $sql = "SELECT KID, art
+            FROM kategorie";
+    $res = mysqli_query($my_db, $sql);
+    $row = mysqli_fetch_all($res);
+    foreach ($row as $item) {
+
+    ?>
     <div class="container">
       <div class="row">
           <div class="col-md-4">
-              <a href="#" id="personen" onclick="document.location=this.id+'.php';return false;" >
-                <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
+              <a href="personen.php?KID=<?=$item['0']?>">
+                  <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
               </a>
-            <h2 align="center"> Klassiker </h2>
+              <h4 align="center"><?php printf("%s", $item['1']); ?> </h4>
           </div>
 
-          <div class="col-md-4">
-              <a href="#" id="personen" onclick="document.location=this.id+'.php';return false;" >
-                <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
-              </a>
-            <h2 align="center"> Professionalisierung </h2>
-          </div>
-
-          <div class="col-md-4">
-              <a href="#" id="personen" onclick="document.location=this.id+'.php';return false;" >
-                <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
-              </a>
-            <h2 align="center"> Wissenschaft </h2>
-          </div>
 
       </div>
       <br/>
     </div>
   </body>
 </html>
+<?php } ?>

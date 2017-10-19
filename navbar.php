@@ -28,15 +28,7 @@
           <li><a href="kategorie.php">Kategorie</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <a class="navbar-brand" href="#">
-                <?php
-                //anzeigen des Nutzernamen, der in der Session steht (also wer angemeldet ist)
-                if(isset($_SESSION['login'])) {
-                    echo "Hallo " . $_SESSION['login'] . "! ";
-                }
-                ?>
-            </a>
-          <li><a href="index.php">Abmelden</a></li>
+          <li><a href="logout.php">Abmelden</a></li>
         </ul>
       </div>
     </div>
