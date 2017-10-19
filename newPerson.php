@@ -52,6 +52,10 @@ require("./navbar.php");
                                     <input type="text" placeholder="0-150" class="form-control form-control-custom" name="alter" required>
                                 </div>
                                 <div class="form-group">
+                                    <label for="film">Film: </label>
+                                    <input type="text" placeholder="https://www.abc.com" class="form-control form-control-custom" name="film">
+                                </div>
+                                <div class="form-group">
                                     <label for="zitat">Zitat: *</label>
                                     <input type="text" placeholder="Zitat" class="form-control form-control-custom" name="zselbst">
                                     <input type="date" placeholder="dd-mm-yyyy" class="form-control form-control-custom" name="zdatum"
@@ -61,10 +65,6 @@ require("./navbar.php");
                                 <div class="form-group">
                                     <label for="text">Text: *</label>
                                     <textarea name="text" cols="35" rows="4" required></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="film">Film: </label>
-                                    <input type="file" accept="video/*" class="form-control-custom" name="film">
                                 </div>
                                 <div class="form-group">
                                     <label for="poster">Poster: *</label>
