@@ -45,7 +45,7 @@
     <h1><?php printf("%s %s", $item['1'], $item['2']); ?> </h1>
     <br/>
     <div class="Container">
-        <img src="image.php?PID=<?=$item['0']?>" alt="<?php printf("Poster von %s %s", $item['1'], $item['2']);?>" class="img-thumbnail">
+        <img src="poster.php?PID=<?=$item['0']?>" alt="<?php printf("Poster von %s %s", $item['1'], $item['2']);?>" class="img-thumbnail">
     </div>
     <div class="Container">
       <p class="text-center text">

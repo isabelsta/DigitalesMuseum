@@ -24,7 +24,7 @@
     <?php
     require("dba.php");
     //wenn keine kategorie gesetzt ist, wird sie nicht berücksichtigt
-    if($_GET['KID']==NULL){
+    if(@$_GET['KID']==NULL){
         $sql = "SELECT PID, vorname, name
             FROM persoenlichkeit";
     }

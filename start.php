@@ -67,24 +67,36 @@ require("navbar.php");
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <?php
+        <?php
         require("dba.php");
         $sql = "SELECT * FROM poster";
         $res = mysqli_query($my_db, $sql);
         $row = mysqli_fetch_all($res);
         foreach($row as $item){
-    ?>
+        ?>
+
+        <li data-target="#myCarousel" data-slide-to="<?=$item['0']?>"></li>
+        <?php } ?>
+    </ol>
+
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
-            <img src="poster.php?PID=<?=$item['0']?>" width="60%" height="80%" style="margin:0 auto;">
+            <a href="personSelbst.php?PID=1">
+                <img src="poster.php?PID=1" width="60%" height="80%" style="margin:0 auto;">
+            </a>
         </div>
-    </div>
+        <?php
+            foreach($row as $item){
+                ?>
+        <div class="item">
+            <a href="personSelbst.php?PID=<?=$item['0']?>">
+                <img src="poster.php?PID=<?=$item['0']?>" width="60%" height="80%" style="margin:0 auto;">
+            </a>
+        </div>
         <?php } ?>
+    </div>
+
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
