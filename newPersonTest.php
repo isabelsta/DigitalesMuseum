@@ -12,30 +12,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!--<link rel="stylesheet" href="./css/custom_styles.css">-->
+      <script type="text/javascript">
+          $(document).ready(function(){
+              var next = 1;
+              $(".add-more").click(function(e){
+                  e.preventDefault();
+                  var addto = "#field" + next;
+                  var addRemove = "#field" + (next);
+                  next = next + 1;
+                  var newIn = '<input autocomplete="off" class="input form-control" id="field' + next + '" name="field' + next + '" type="text">';
+                  var newInput = $(newIn);
+                  var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
+                  var removeButton = $(removeBtn);
+                  $(addto).after(newInput);
+                  $(addRemove).after(removeButton);
+                  $("#field" + next).attr('data-source',$(addto).attr('data-source'));
+                  $("#count").val(next);
 
-    <script type="text/javascript">
-      <!--
-      function clone_this(objButton)
-      {
-          if(objButton.parentNode)
-          {
-              tmpNode=objButton.parentNode.cloneNode(true);
-              objButton.form.appendChild(tmpNode);
-              for(j=0;j<objButton.form.lastChild.childNodes.length;++j)
-              {
-                  if(objButton.form.lastChild.childNodes[j].type=='text')
-                  {
-                      objButton.form.lastChild.childNodes[j].value='';
-                      break;
-                  }
-              }
-              objButton.value="entfernen";
-              objButton.onclick=new Function('f1','this.form.removeChild(this.parentNode)');
-          }
-      }
-      //-->
-    </script>
-
+                  $('.remove-me').click(function(e){
+                      e.preventDefault();
+                      var fieldNum = this.id.charAt(this.id.length-1);
+                      var fieldID = "#field" + fieldNum;
+                      $(this).remove();
+                      $(fieldID).remove();
+                  });
+              });
+          });
+      </script>
   </head>
   <body>
     <?php
@@ -115,7 +118,21 @@
                                         <input type="text" placeholder="Jahr" class="form-control form-control-custom" name="ljahr" required>
                                         <input type="text" placeholder="Autor" class="form-control form-control-custom" name="lautor" required>
                                         <input type="text" placeholder="Seiten" class="form-control form-control-custom" name="lseiten" required>
-                                        <input type="button" class="btn btn-group btn-form" value="Weiter Literatur" onclick="clone_this(this)">
+                                    </div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <input type="hidden" name="count" value="1" />
+                                            <div class="control-group" id="fields">
+                                                <label class="control-label" for="field1">Nice Multiple Form Fields</label>
+                                                <div class="controls" id="profs">
+                                                    <form class="input-append">
+                                                        <div id="field"><input autocomplete="off" class="input" id="field1" name="prof1" type="text" placeholder="Type something" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+                                                    </form>
+                                                    <br>
+                                                    <small>Press + to add another form field :)</small>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-group">Pers&ouml;nlichkeit hinzuf&uuml;gen</button>

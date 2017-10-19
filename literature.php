@@ -22,7 +22,7 @@
     <br/>
     <br/>
     <div class="Container">
-        <h3><b>Literatur</b></h3>
+        <h1>Literatur</h1>
         <p class="literatur">
             <br/>
             Böhm, Winfried 2003:  Maria Montessori. In: Tenorth, Heinz Elmar (Hrsg.): Klassiker der Pädagogik Bd.2, S. 74-88. München.
