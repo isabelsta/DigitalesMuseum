@@ -24,7 +24,6 @@
 
     <div class="main">
         <h1>Zeitstrahl</h1>
-        <p>Personen lalalla</p>
     </div>
 
     <div class="timeline">

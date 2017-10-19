@@ -32,7 +32,7 @@
     <br/>
     <br/>
     <div class="Container">
-        <h3><b>Literatur</b></h3>
+        <h1>Literatur</h1>
         <p class="literatur">
             <?php
             foreach($row as $item) {
