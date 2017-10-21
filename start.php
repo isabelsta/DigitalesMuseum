@@ -67,6 +67,7 @@ require("navbar.php");
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <?php
         require("dba.php");
+        //auslesen aller poster in der datenbank, um im karussell darzustellen
         $sql = "SELECT * FROM poster";
         $res = mysqli_query($my_db, $sql);
         $row = mysqli_fetch_all($res);

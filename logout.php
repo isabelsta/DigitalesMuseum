@@ -8,6 +8,7 @@
 </head>
 
 <?php
+//die session wird zerstört, um den benutzer auszuloggen
 session_start();
 //variablen leeren
 $_SESSION = array();

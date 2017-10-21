@@ -31,7 +31,7 @@
 
     <?php
         require("dba.php");
-
+    //liest alle kategorien aus, um sie anzeigen zu lassen
     $sql = "SELECT KID, art
             FROM kategorie";
     $res = mysqli_query($my_db, $sql);

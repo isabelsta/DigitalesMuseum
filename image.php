@@ -2,6 +2,7 @@
 require("dba.php");
 //bild auslesen/ausgeben
 $person = $_GET['PID'];
+//sucht das bild, das zur übergebenen persoelichkeits id passt
 $sql = "SELECT bild.BID, bild.data, bild.name, bild.typ, bild.groese 
         FROM bild, persoenlichkeit, hat_medium
         WHERE bild.BID = hat_medium.BID

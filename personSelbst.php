@@ -71,7 +71,6 @@
           <br/>
           <?php
             //video
-            define('SITELINK', $item['11']);
             printf("%s, %s (%s min): ", $item['8'], $item['9'], $item['10']);
             echo "<a href=".$item['11'].">Zum Video</a>";
 
