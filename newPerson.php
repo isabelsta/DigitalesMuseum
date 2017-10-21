@@ -17,6 +17,7 @@
 <body>
 <?php
 require("./navbar.php");
+require("neuePerson.php");
 ?>
 <br/>
 <br/>
@@ -41,25 +42,27 @@ require("./navbar.php");
                                 </div>
                                 <div class="form-group">
                                     <label for="gebDat">Geburtsdatum: *</label>
-                                    <input type="text" placeholder="dd-mm-yyyy" class="form-control form-control-custom" name="gebDat" required>
+                                    <input type="text" placeholder="yyyy-mm-dd" class="form-control form-control-custom" name="gebDat" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="todDat">Todesdatum: </label>
-                                    <input type="text" placeholder="dd-mm-yyyy" class="form-control form-control-custom" name="todDat">
+                                    <input type="text" placeholder="yyyy-mm-dd" class="form-control form-control-custom" name="todDat">
                                 </div>
                                 <div class="form-group">
                                     <label for="alter">Alter: *</label>
                                     <input type="text" placeholder="0-150" class="form-control form-control-custom" name="alter" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="film">Film: </label>
-                                    <input type="text" placeholder="https://www.abc.com" class="form-control form-control-custom" name="film">
+                                    <label for="film">Film: *</label>
+                                    <input type="text" placeholder="https://www.abc.com" class="form-control form-control-custom" name="furl">
+                                    <input type="text" placeholder="Titel" class="form-control form-control-custom" name="ftitel">
+                                    <input type="text" placeholder="Dauer" class="form-control form-control-custom" name="fdauer">
+                                    <input type="text" placeholder="Jahr" class="form-control form-control-custom" name="fjahr">
                                 </div>
                                 <div class="form-group">
                                     <label for="zitat">Zitat: *</label>
                                     <input type="text" placeholder="Zitat" class="form-control form-control-custom" name="zselbst">
-                                    <input type="date" placeholder="dd-mm-yyyy" class="form-control form-control-custom" name="zdatum"
-                                           pattern="^(31|30|0[1-9]|[12][0-9]|[1-9])\-(0[1-9]|1[012]|[1-9])\-((18|19|20)\d{2}|\d{2})$">
+                                    <input type="text" placeholder="yyyy-mm-dd" class="form-control form-control-custom" name="zdatum">
                                     <input type="text" placeholder="Quelle" class="form-control form-control-custom" name="zquelle">
                                 </div>
                                 <div class="form-group">
@@ -76,11 +79,11 @@ require("./navbar.php");
                                 </div>
                                 <div class="form-group">
                                     <label for="kategorie">Kategorie: *</label><br>
-                                    <input type="radio" id="kat1" name="Kategorie" value="Kla" checked>
+                                    <input type="radio" id="kat1" name="Kla" value="Kla" checked>
                                     <label for="k1">Klassiker</label><br>
-                                    <input type="radio" id="kat2" name="Kategorie" value="Pro">
+                                    <input type="radio" id="kat2" name="Pro" value="Pro">
                                     <label for="k2">Professionalisierung</label><br>
-                                    <input type="radio" id="kat3" name="Kategorie" value="Wis">
+                                    <input type="radio" id="kat3" name="Wis" value="Wis">
                                     <label for="k3">Wissenschaft</label>
                                 </div>
                                 <div class="form-group">
@@ -90,13 +93,13 @@ require("./navbar.php");
                                         <div class="controls" id="profs">
                                             <div id="field">
                                                 <button id="b1" class="btn btn-form btn-group add-more btn-lit" type="button">+</button>
-                                                <input class="input form-control form-control-lit" id="ltitel1" name="ltitel1" type="text" placeholder="Titel" required/>
-                                                <input class="input form-control form-control-lit" id="lstadt1" name="lstadt1" type="text"  placeholder="Stadt" required />
-                                                <input class="input form-control form-control-lit" id="lverlag1" name="lverlag1" type="text"  placeholder="Verlag" required />
-                                                <input class="input form-control form-control-lit" id="lauflage1" name="lauflage1" type="text"  placeholder="Auflage" required />
-                                                <input class="input form-control form-control-lit" id="ljahr1" name="ljahr1" type="text"  placeholder="Jahr" required />
-                                                <input class="input form-control form-control-lit" id="lautor1" name="lautor1" type="text"  placeholder="Autor" required />
-                                                <input class="input form-control form-control-lit" id="lseiten1" name="lseiten1" type="text"  placeholder="Seiten" required />
+                                                <input class="input form-control form-control-lit" id="ltitel1" name="ltitel" type="text" placeholder="Titel" required/>
+                                                <input class="input form-control form-control-lit" id="lstadt1" name="lstadt" type="text"  placeholder="Stadt" required />
+                                                <input class="input form-control form-control-lit" id="lverlag1" name="lverlag" type="text"  placeholder="Verlag" required />
+                                                <input class="input form-control form-control-lit" id="lauflage1" name="lauflage" type="text"  placeholder="Auflage" required />
+                                                <input class="input form-control form-control-lit" id="ljahr1" name="ljahr" type="text"  placeholder="Jahr" required />
+                                                <input class="input form-control form-control-lit" id="lautor1" name="lautor" type="text"  placeholder="Autor" required />
+                                                <input class="input form-control form-control-lit" id="lseiten1" name="lseiten" type="text"  placeholder="Seiten" required />
                                             </div>
                                         </div>
                                     </div>

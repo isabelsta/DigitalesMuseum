@@ -42,7 +42,7 @@ textarea{
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .open > a:hover{
-  background-color: #9b6252b3;
+  background-color: rgba(155, 98, 82, 0.7);
   color: black;
 }
 
