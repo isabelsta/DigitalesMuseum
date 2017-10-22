@@ -30,7 +30,7 @@ require("neuePerson.php");
             <div class="col-md-4 col-md-offset-4 col-custom">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <form accept-charset="UTF-8" role="form" action="personen.php" method="post" enctype='multipart/form-data'>
+                        <form accept-charset="UTF-8" role="form" action="newPerson.php" method="post" enctype='multipart/form-data'>
                             <fieldset>
                                 <div class="form-group">
                                     <label for="vorname">Vorname: *</label>

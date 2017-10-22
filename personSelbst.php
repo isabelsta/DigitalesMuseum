@@ -85,8 +85,12 @@
         </a>
     </div>
     <br/>
-    <button type="button" id="Pbearbeiten" class="btn-group btn btn-right">Persönlichkeit bearbeiten</button>
-    <button type="button" id="Ploeschen" class="btn-group btn btn-right">Persönlichkeit löschen</button>
+    <button type="button" id="Pbearbeiten" class="btn-group btn btn-right">
+        Persönlichkeit bearbeiten
+    </button>
+    <button type="button" id="Ploeschen" class="btn-group btn btn-right">
+        <a href="loeschen.php?PID=<?=$item['0']?>">Persönlichkeit löschen</a>
+    </button>
   </body>
 </html>
 <?php } ?>

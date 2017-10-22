@@ -96,11 +96,11 @@ if($_REQUEST['vorname']!=NULL && $_REQUEST['nachname']!= NULL && $_REQUEST['gebD
 
                 //zitat einfügen, erst id von person ausgeben um sie mit einzufügen
                 $sql4 = "SELECT PID FROM persoenlichkeit 
-            WHERE vorname = '".$vorname."'
-            AND name = '".$nachname."'
-            AND geb = '".$gebDat."'
-            AND tod = '".$todDat."'
-            AND age = '".$alter."'";
+                         WHERE vorname = '".$vorname."'
+                         AND name = '".$nachname."'
+                         AND geb = '".$gebDat."'
+                         AND tod = '".$todDat."'
+                         AND age = '".$alter."'";
                 $res4 = mysqli_query($my_db, $sql4) or die (mysqli_error($my_db));
                 $res4 = mysqli_fetch_assoc($res4);
                 $sql5 = "INSERT INTO zitat (datum, quelle, inhalt, PID) VALUES ('".$zdatum."', '".$zquelle."', '".$zselbst."', '".$res4['PID']."')";
@@ -115,23 +115,24 @@ if($_REQUEST['vorname']!=NULL && $_REQUEST['nachname']!= NULL && $_REQUEST['gebD
                     $res16 = mysqli_query($my_db, $sql16) or die (mysqli_error($my_db));
                 }else{
                     $sql17 = "INSERT INTO gehoert_zu (PID, KID) VALUES ('".$res4['PID']."', '1')";
-                    $res17 = mysqli_query($my_db, $sql15) or die (mysqli_error($my_db));
+                    $res17 = mysqli_query($my_db, $sql17) or die (mysqli_error($my_db));
                 }
 
                 //literatur einfügen
+
                 $sql6 = "INSERT INTO literatur (titel, stadt, verlag, auflage, jahr, autor, seiten)
-             VALUES ('".$titel."', '".$stadt."','".$verlag."','".$auflage."','".$jahr."','".$autor."','".$seiten."') ";
+                         VALUES ('".$titel."' , '".$stadt."' , '".$verlag."' , '".$auflage."' , '".$jahr."' , '".$autor."' , '".$seiten."') ";
                 $res6 = mysqli_query($my_db, $sql6) or die (mysqli_error($my_db));
 
                 //verbindungstabelle über, erst literatur ID auslesen
                 $sql7 = "SELECT LID FROM literatur 
-             WHERE titel = '".$titel."'
-             AND stadt = '".$stadt."'
-             AND verlag = '".$verlag."'
-             AND auflage = '".$auflage."'
-             AND jahr = '".$jahr."'
-             AND autor = '".$autor."'
-             AND seiten = '".$seiten."'";
+                         WHERE titel = '".$titel."'
+                         AND stadt = '".$stadt."'
+                         AND verlag = '".$verlag."'
+                         AND auflage = '".$auflage."'
+                         AND jahr = '".$jahr."'
+                         AND autor = '".$autor."'
+                         AND seiten = '".$seiten."' ";
                 $res7 = mysqli_query($my_db, $sql7) or die (mysqli_error($my_db));
                 $res7 = mysqli_fetch_assoc($res7);
                 $sql8 = "INSERT INTO ueber (PID, LID) VALUES ('".$res4['PID']."', '".$res7['LID']."')";
