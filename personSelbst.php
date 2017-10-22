@@ -71,8 +71,7 @@
           <br/>
           <?php
             //video
-            define('SITELINK', $item['11']);
-            printf("%s, %s (%s): ", $item['8'], $item['9'], $item['10']);
+            printf("%s, %s (%s min): ", $item['8'], $item['9'], $item['10']);
             echo "<a href=".$item['11'].">Zum Video</a>";
 
           ?>
@@ -86,8 +85,12 @@
         </a>
     </div>
     <br/>
-    <button type="button" id="Pbearbeiten" class="btn-group btn btn-right">Persönlichkeit bearbeiten</button>
-    <button type="button" id="Ploeschen" class="btn-group btn btn-right">Persönlichkeit löschen</button>
+    <button type="button" id="Pbearbeiten" class="btn-group btn btn-right">
+        Persönlichkeit bearbeiten
+    </button>
+    <button type="button" id="Ploeschen" class="btn-group btn btn-right">
+        <a href="loeschen.php?PID=<?=$item['0']?>">Persönlichkeit löschen</a>
+    </button>
   </body>
 </html>
 <?php } ?>

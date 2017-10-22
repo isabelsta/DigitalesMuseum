@@ -5,13 +5,13 @@ $(document).ready(function(){
         var addto = "#field";
         var addRemove = "#field";
         next = next + 1;
-        var newIn = '<input class="input form-control form-control-lit" id="ltitel' + next + '" name="ltitel' + next + '" type="text" placeholder="Titel">' +
-            '<input class="input form-control form-control-lit" id="lstadt' + next + '" name="lstadt' + next + '" type="text" placeholder="Stadt">' +
-            '<input class="input form-control form-control-lit" id="lverlag' + next + '" name="lverlag' + next + '" type="text" placeholder="Verlag">' +
-            '<input class="input form-control form-control-lit" id="lauflage' + next + '" name="lauflage' + next + '" type="text" placeholder="Auflage">' +
-            '<input class="input form-control form-control-lit" id="ljahr' + next + '" name="ljahr' + next + '" type="text" placeholder="Jahr">' +
-            '<input class="input form-control form-control-lit" id="lautor' + next + '" name="lautor' + next + '" type="text" placeholder="Autor">' +
-            '<input class="input form-control form-control-lit" id="lseiten' + next + '" name="lseiten' + next + '" type="text" placeholder="Seiten"><br id="break' + next + '"/>';
+        var newIn = '<input class="input form-control form-control-lit" id="ltitel' + next + '" name="ltitel" type="text" placeholder="Titel">' +
+            '<input class="input form-control form-control-lit" id="lstadt' + next + '" name="lstadt" type="text" placeholder="Stadt">' +
+            '<input class="input form-control form-control-lit" id="lverlag' + next + '" name="lverlag" type="text" placeholder="Verlag">' +
+            '<input class="input form-control form-control-lit" id="lauflage' + next + '" name="lauflage" type="text" placeholder="Auflage">' +
+            '<input class="input form-control form-control-lit" id="ljahr' + next + '" name="ljahr" type="text" placeholder="Jahr">' +
+            '<input class="input form-control form-control-lit" id="lautor' + next + '" name="lautor" type="text" placeholder="Autor">' +
+            '<input class="input form-control form-control-lit" id="lseiten' + next + '" name="lseiten" type="text" placeholder="Seiten"><br id="break' + next + '"/>';
         var newInput = $(newIn);
         var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me btn-lit" type="button">-</button>';
         var removeButton = $(removeBtn);

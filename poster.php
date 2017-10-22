@@ -1,6 +1,6 @@
 <?php
 require("dba.php");
-//bild auslesen/ausgeben
+//poster passend zur übergebenen personen id auslesen/ausgeben
 $person = $_GET['PID'];
 $sql = "SELECT poster.POID, poster.data, poster.name, poster.typ, poster.groese 
         FROM poster, persoenlichkeit, hat_medium

@@ -18,6 +18,7 @@
     <?php
       require("./navbar.php");
       require("dba.php");
+      //gibt die literatur passend zur übergebenen personen id aus
       $person = $_GET["PID"];
       $sql = "SELECT literatur.autor, literatur.titel, literatur.stadt, literatur.verlag, literatur.auflage, literatur.seiten
                 FROM literatur, ueber
