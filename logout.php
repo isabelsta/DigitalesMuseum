@@ -18,7 +18,7 @@ if (isset($_COOKIE[session_name()])) {
 }
 session_destroy();
 
-echo "<div class=\"alert alert-danger\">
+echo "<div class=\"alert alert-danger panel-body col-md-4 col-md-offset-4 panel-logout\">
                 <strong>Info!</strong> Du wurdest ausgeloggt! <a href='index.php'>Wieder anmelden</a>
               </div>";
 ?>
