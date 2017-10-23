@@ -17,9 +17,6 @@
     <?php
       require("./navbar.php");
     ?>
-    <br/>
-    <br/>
-    <br/>
 
     <?php
     require("dba.php");
@@ -45,9 +42,9 @@
 
     ?>
 
-    <div class="col-md-4" style="text-align: center;">
+    <div class="col-md-4 col-md-4-pers" style="text-align: center;">
         <a href="personSelbst.php?PID=<?=$item['0']?>" >
-            <img src="image.php?PID=<?=$item['0']?>" alt="<?php printf("%s %s", $item['1'], $item['2']); ?>" class="img-thumbnail" >
+            <img src="image.php?PID=<?=$item['0']?>" alt="<?php printf("%s %s", $item['1'], $item['2']); ?>" class="img-thumbnail img-gg" >
         </a>
         <h4 align="center">
             <?php

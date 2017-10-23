@@ -71,6 +71,10 @@ textarea{
   text-align: center;
 }
 
+.col-md-4-pers {
+  margin-top: 5%;
+}
+
 .col-custom{
   width: 50%;
   margin-left: 25%;
@@ -79,14 +83,6 @@ textarea{
 .form-control-custom{
   width: 80%;
   margin: 0 auto;
-  float: none;
-  margin-top: 2px;
-}
-
-.form-control-lit{
-  width: 70%;
-  margin-left: 15%;
-  margin-right: auto;
   float: none;
   margin-top: 2px;
 }
@@ -142,8 +138,12 @@ textarea{
   color: black;
 }
 
-#field {
-  margin-bottom:20px;
+.cont-kat{
+  margin-top: 15%;
+}
+
+.img-gg{
+  height: 300px;
 }
 
 * {
