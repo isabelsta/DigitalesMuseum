@@ -77,11 +77,11 @@ require("neuePerson.php");
                                 </div>
                                 <div class="form-group">
                                     <label for="kategorie">Kategorie: *</label><br>
-                                    <input type="radio" id="kat1" name="Kla" value="Kla" checked>
+                                    <input type="radio" id="kat1" name="kategorie" value="Kla" checked>
                                     <label for="k1">Klassiker</label><br>
-                                    <input type="radio" id="kat2" name="Pro" value="Pro">
+                                    <input type="radio" id="kat2" name="kategorie" value="Pro">
                                     <label for="k2">Professionalisierung</label><br>
-                                    <input type="radio" id="kat3" name="Wis" value="Wis">
+                                    <input type="radio" id="kat3" name="kategorie" value="Wis">
                                     <label for="k3">Wissenschaft</label>
                                 </div>
                                 <div class="form-group">

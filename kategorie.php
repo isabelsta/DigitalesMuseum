@@ -35,7 +35,7 @@
 
           <div class="col-md-4">
               <a href="personen.php?KID=<?=$item['0']?>">
-                  <img src="katbild.php?KBID=<?=$item['0']?>" alt="Mein Bild" class="img-thumbnail" >
+                  <img src="katbild.php?KBID=<?=$item['0']?>" alt="Mein Bild" class="img-thumbnail img-gg" >
               </a>
               <h2 align="center"><?php printf("%s", $item['1']); ?> </h2>
           </div>

@@ -157,7 +157,7 @@ if($_REQUEST['vorname']!=NULL && $_REQUEST['nachname']!= NULL && $_REQUEST['gebD
     $res6 = mysqli_query($my_db, $sql6) or die (mysqli_error($my_db));
 
 
-    echo "<div class=\"alert alert-danger\">
+    echo "<div class=\"alert alert-danger panel-body col-md-4 col-md-offset-4 panel-logout\">
                 <strong>Info!</strong> Du hast eine Person bearbeitet! <a href='personSelbst.php?PID=$person'>Zurück zur Person</a>
               </div>";
 }
