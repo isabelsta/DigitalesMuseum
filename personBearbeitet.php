@@ -108,63 +108,58 @@ if($_REQUEST['vorname']!=NULL && $_REQUEST['nachname']!= NULL && $_REQUEST['gebD
                 $sql20 = "UPDATE poster SET data = '$poster2_daten', name = '$poster2_name', typ = '$poster2_type', groese = '$poster_size' WHERE POID = '".$POID."'";
                 $res20 = mysqli_query($my_db, $sql20) or die(mysqli_error($my_db));
 
-                //person einfügen
-                $sql21 = "UPDATE persoenlichkeit SET vorname = '".$vorname."', name = '".$nachname."', geb = '".$gebDat."', tod = '".$todDat."', age = '".$alter."' WHERE PID = '".$PID."'";
-                $res21 = mysqli_query($my_db, $sql21) or die (mysqli_error($my_db));
 
-                //film zur person einfügen
-                $sql2 = "UPDATE film SET titel = '".$ftitel."', dauer = '".$fdauer."', jahr = '".$fjahr."', url = '".$furl."' WHERE FID = '".$FID."'";
-                $res2 = mysqli_query($my_db, $sql2) or die (mysqli_error($my_db));
 
-                //text zur person einfügen
-                $sql3 = "UPDATE text SET inhalt = '".$text."' WHERE TID = '".$TID."'";
-                $res3 = mysqli_query($my_db, $sql3) or die (mysqli_error($my_db));
+            }
+        }
+    }
+    //person einfügen
+    $sql21 = "UPDATE persoenlichkeit SET vorname = '".$vorname."', name = '".$nachname."', geb = '".$gebDat."', tod = '".$todDat."', age = '".$alter."' WHERE PID = '".$PID."'";
+    $res21 = mysqli_query($my_db, $sql21) or die (mysqli_error($my_db));
 
-                //zitat einfügen, erst id von person ausgeben um sie mit einzufügen
-                $sql4 = "SELECT PID FROM persoenlichkeit 
+    //film zur person einfügen
+    $sql2 = "UPDATE film SET titel = '".$ftitel."', dauer = '".$fdauer."', jahr = '".$fjahr."', url = '".$furl."' WHERE FID = '".$FID."'";
+    $res2 = mysqli_query($my_db, $sql2) or die (mysqli_error($my_db));
+
+    //text zur person einfügen
+    $sql3 = "UPDATE text SET inhalt = '".$text."' WHERE TID = '".$TID."'";
+    $res3 = mysqli_query($my_db, $sql3) or die (mysqli_error($my_db));
+
+    //zitat einfügen, erst id von person ausgeben um sie mit einzufügen
+    $sql4 = "SELECT PID FROM persoenlichkeit 
                          WHERE vorname = '".$vorname."'
                          AND name = '".$nachname."'
                          AND geb = '".$gebDat."'
                          AND tod = '".$todDat."'
                          AND age = '".$alter."'";
-                $res4 = mysqli_query($my_db, $sql4) or die (mysqli_error($my_db));
-                $res4 = mysqli_fetch_assoc($res4);
-                $sql5 = "UPDATE zitat SET datum = '".$zdatum."', quelle = '".$zquelle."', inhalt = '".$zselbst."', PID = '".$res4['PID']."' WHERE PID = '".$PID."'";
-                $res5 = mysqli_query($my_db, $sql5) or die (mysqli_error($my_db));
+    $res4 = mysqli_query($my_db, $sql4) or die (mysqli_error($my_db));
+    $res4 = mysqli_fetch_assoc($res4);
+    $sql5 = "UPDATE zitat SET datum = '".$zdatum."', quelle = '".$zquelle."', inhalt = '".$zselbst."', PID = '".$res4['PID']."' WHERE PID = '".$PID."'";
+    $res5 = mysqli_query($my_db, $sql5) or die (mysqli_error($my_db));
 
 
-                //kategorie der person in die tabelle gehoert_zu eintragen
-                if($kategorie=='Pro'){
-                    $sql15 = "UPDATE gehoert_zu SET KID = '2' WHERE PID = '".$res4['PID']."' ";
-                    $res15 = mysqli_query($my_db, $sql15) or die (mysqli_error($my_db));
-                }elseif($kategorie=='Wis'){
-                    $sql16 = "UPDATE gehoert_zu SET KID = '3' WHERE PID = '".$res4['PID']."'";
-                    $res16 = mysqli_query($my_db, $sql16) or die (mysqli_error($my_db));
-                }else{
-                    $sql17 = "UPDATE gehoert_zu SET KID = '1' WHERE PID = '".$res4['PID']."'";
-                    $res17 = mysqli_query($my_db, $sql17) or die (mysqli_error($my_db));
-                }
+    //kategorie der person in die tabelle gehoert_zu eintragen
+    if($kategorie=='Pro'){
+        $sql15 = "UPDATE gehoert_zu SET KID = '2' WHERE PID = '".$res4['PID']."' ";
+        $res15 = mysqli_query($my_db, $sql15) or die (mysqli_error($my_db));
+    }elseif($kategorie=='Wis'){
+        $sql16 = "UPDATE gehoert_zu SET KID = '3' WHERE PID = '".$res4['PID']."'";
+        $res16 = mysqli_query($my_db, $sql16) or die (mysqli_error($my_db));
+    }else{
+        $sql17 = "UPDATE gehoert_zu SET KID = '1' WHERE PID = '".$res4['PID']."'";
+        $res17 = mysqli_query($my_db, $sql17) or die (mysqli_error($my_db));
+    }
 
-                //literatur einfügen
+    //literatur einfügen
 
-                $sql6 = "UPDATE literatur SET titel = '".$titel."', stadt = '".$stadt."', verlag = '".$verlag."', auflage = '".$auflage."', jahr = '".$jahr."', autor= '".$autor."', seiten = '".$seiten."'
+    $sql6 = "UPDATE literatur SET titel = '".$titel."', stadt = '".$stadt."', verlag = '".$verlag."', auflage = '".$auflage."', jahr = '".$jahr."', autor= '".$autor."', seiten = '".$seiten."'
                          WHERE LID = '".$LID."' ";
-                $res6 = mysqli_query($my_db, $sql6) or die (mysqli_error($my_db));
+    $res6 = mysqli_query($my_db, $sql6) or die (mysqli_error($my_db));
 
 
-                echo "<div class=\"alert alert-danger\">
+    echo "<div class=\"alert alert-danger\">
                 <strong>Info!</strong> Du hast eine Person bearbeitet! <a href='personSelbst.php?PID=$person'>Zurück zur Person</a>
               </div>";
-
-            } else {
-                echo "<BR>Die übergebenen Daten waren kein Bild-Format.<BR>";
-            }
-        }else {
-            echo "<BR>Keine Daten übergeben.<BR>";
-        }
-    } else{
-        echo "Bild Error!";
-    }
 }
 
 ?>

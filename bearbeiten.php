@@ -91,11 +91,11 @@ $LID = $row['LID'];
                             </div>
                             <div class="form-group">
                                 <label for="poster">Poster: *</label>
-                                <input type="file" accept="image/*" class="form-control-custom" name="poster"  required>
+                                <input type="file" accept="image/*" class="form-control-custom" name="poster">
                             </div>
                             <div class="form-group">
                                 <label for="bild">Bilder: *</label>
-                                <input type="file" accept="image/*" class="form-control-custom" name="bild_daten"  multiple required>
+                                <input type="file" accept="image/*" class="form-control-custom" name="bild_daten"  multiple>
                             </div>
                             <div class="form-group">
                                 <label for="kategorie">Kategorie: *</label><br>
