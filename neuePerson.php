@@ -93,10 +93,10 @@ if($_REQUEST['vorname']!=NULL && $_REQUEST['nachname']!= NULL && $_REQUEST['gebD
                 $res5 = mysqli_query($my_db, $sql5) or die (mysqli_error($my_db));
 
                 //kategorie der person in die tabelle gehoert_zu eintragen
-                if(isset($_REQUEST['Pro'])){
+                if($kategorie=='Pro'){
                     $sql15 = "INSERT INTO gehoert_zu (PID, KID) VALUES ('".$res4['PID']."', '2')";
                     $res15 = mysqli_query($my_db, $sql15) or die (mysqli_error($my_db));
-                }elseif(isset($_REQUEST['Wis'])){
+                }elseif($kategorie=='Wis'){
                     $sql16 = "INSERT INTO gehoert_zu (PID, KID) VALUES ('".$res4['PID']."', '3')";
                     $res16 = mysqli_query($my_db, $sql16) or die (mysqli_error($my_db));
                 }else{

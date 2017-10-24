@@ -62,7 +62,7 @@
     $sql2 = "DELETE FROM persoenlichkeit WHERE PID = '".$person."'";
     $res2 = mysqli_query($my_db, $sql2) or die (mysqli_error($my_db));
 
-    echo "<div class=\"alert alert-danger\">
+    echo "<div class=\"alert alert-danger  panel-body col-md-4 col-md-offset-4 panel-logout\">
                 <strong>Info!</strong> Du hast eine Person gelöscht! <a href='personen.php'>Zurück zur Personenübersicht</a>
               </div>";
 ?>

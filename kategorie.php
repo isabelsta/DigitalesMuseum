@@ -12,23 +12,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-
   </head>
   <body>
     <?php
       require("./navbar.php");
     ?>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-
+    <div class="container cont-kat">
+        <div class="row">
     <?php
         require("dba.php");
     //liest alle kategorien aus, um sie anzeigen zu lassen
@@ -42,19 +32,17 @@
     foreach ($row as $item) {
 
     ?>
-    <div class="container">
-      <div class="row">
+
           <div class="col-md-4">
               <a href="personen.php?KID=<?=$item['0']?>">
-                  <img src="katbild.php?KBID=<?=$item['0']?>" alt="Mein Bild" class="img-thumbnail" >
+                  <img src="katbild.php?KBID=<?=$item['0']?>" alt="Mein Bild" class="img-thumbnail img-gg" >
               </a>
               <h2 align="center"><?php printf("%s", $item['1']); ?> </h2>
           </div>
 
-
-      </div>
-      <br/>
+<?php } ?>
+        </div>
+        <br/>
     </div>
   </body>
 </html>
-<?php }  ?>

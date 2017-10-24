@@ -11,8 +11,6 @@
     <link href="css/custom.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!--<link rel="stylesheet" href="./css/custom_styles.css">-->
-    <script src="./mehrLiteratur.js" type="text/javascript"></script>
 </head>
 <body>
 <?php
@@ -79,29 +77,23 @@ require("neuePerson.php");
                                 </div>
                                 <div class="form-group">
                                     <label for="kategorie">Kategorie: *</label><br>
-                                    <input type="radio" id="kat1" name="Kla" value="Kla" checked>
+                                    <input type="radio" id="kat1" name="kategorie" value="Kla" checked>
                                     <label for="k1">Klassiker</label><br>
-                                    <input type="radio" id="kat2" name="Pro" value="Pro">
+                                    <input type="radio" id="kat2" name="kategorie" value="Pro">
                                     <label for="k2">Professionalisierung</label><br>
-                                    <input type="radio" id="kat3" name="Wis" value="Wis">
+                                    <input type="radio" id="kat3" name="kategorie" value="Wis">
                                     <label for="k3">Wissenschaft</label>
                                 </div>
                                 <div class="form-group">
-                                    <input type="hidden" name="count" value="1" />
                                     <div class="control-group" id="fields">
                                         <label class="control-label" for="field1">Literatur: *</label>
-                                        <div class="controls" id="profs">
-                                            <div id="field">
-                                                <button id="b1" class="btn btn-form btn-group add-more btn-lit" type="button">+</button>
-                                                <input class="input form-control form-control-lit" id="ltitel1" name="ltitel" type="text" placeholder="Titel" required/>
-                                                <input class="input form-control form-control-lit" id="lstadt1" name="lstadt" type="text"  placeholder="Stadt" required />
-                                                <input class="input form-control form-control-lit" id="lverlag1" name="lverlag" type="text"  placeholder="Verlag" required />
-                                                <input class="input form-control form-control-lit" id="lauflage1" name="lauflage" type="text"  placeholder="Auflage" required />
-                                                <input class="input form-control form-control-lit" id="ljahr1" name="ljahr" type="text"  placeholder="Jahr" required />
-                                                <input class="input form-control form-control-lit" id="lautor1" name="lautor" type="text"  placeholder="Autor" required />
-                                                <input class="input form-control form-control-lit" id="lseiten1" name="lseiten" type="text"  placeholder="Seiten" required />
-                                            </div>
-                                        </div>
+                                                <input class="input form-control form-control-custom" id="ltitel1" name="ltitel" type="text" placeholder="Titel" required/>
+                                                <input class="input form-control form-control-custom" id="lstadt1" name="lstadt" type="text"  placeholder="Stadt" required />
+                                                <input class="input form-control form-control-custom" id="lverlag1" name="lverlag" type="text"  placeholder="Verlag" required />
+                                                <input class="input form-control form-control-custom" id="lauflage1" name="lauflage" type="text"  placeholder="Auflage" required />
+                                                <input class="input form-control form-control-custom" id="ljahr1" name="ljahr" type="text"  placeholder="Jahr" required />
+                                                <input class="input form-control form-control-custom" id="lautor1" name="lautor" type="text"  placeholder="Autor" required />
+                                                <input class="input form-control form-control-custom" id="lseiten1" name="lseiten" type="text"  placeholder="Seiten" required />
                                     </div>
                                 </div>
                                 <div class="form-group">

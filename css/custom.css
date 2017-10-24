@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
 html{
   font-family:'Balloon';
 }
@@ -47,6 +48,7 @@ textarea{
 }
 
 .dropdown-menu{
+  font-size: 16px;
   background-color: #b88d81;
   color: black;
 }
@@ -57,12 +59,21 @@ textarea{
 }
 
 .panel-body{
+  font-size: 18px;
   background-color: #b88d81;
   color: #3e3d3d;
 }
 
+.panel-logout{
+  margin-top: 15%;
+}
+
 .col-md-4 {
   text-align: center;
+}
+
+.col-md-4-pers {
+  margin-top: 5%;
 }
 
 .col-custom{
@@ -73,14 +84,6 @@ textarea{
 .form-control-custom{
   width: 80%;
   margin: 0 auto;
-  float: none;
-  margin-top: 2px;
-}
-
-.form-control-lit{
-  width: 70%;
-  margin-left: 15%;
-  margin-right: auto;
   float: none;
   margin-top: 2px;
 }
@@ -116,7 +119,7 @@ textarea{
   float: right;
 }
 
-.btn-form{
+.btn-form > a{
   margin-right: 10px;
   margin-bottom: 30px;
   font-size: 15px;
@@ -128,8 +131,20 @@ textarea{
   float: right;
 }
 
-#field {
-  margin-bottom:20px;
+.btn-person > a{
+  color: #FFEFE2;
+}
+
+.btn-person:hover > a{
+  color: black;
+}
+
+.cont-kat{
+  margin-top: 15%;
+}
+
+.img-gg{
+  height: 300px;
 }
 
 * {

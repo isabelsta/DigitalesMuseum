@@ -85,10 +85,10 @@
         </a>
     </div>
     <br/>
-    <button type="button" id="Pbearbeiten" class="btn-group btn btn-right">
+    <button type="button" id="Pbearbeiten" class="btn-group btn btn-right btn-person">
         <a href="bearbeiten.php?PID=<?=$item['0']?>">Persönlichkeit bearbeiten</a>
     </button>
-    <button type="button" id="Ploeschen" class="btn-group btn btn-right">
+    <button type="button" id="Ploeschen" class="btn-group btn btn-right btn-person">
         <a href="loeschen.php?PID=<?=$item['0']?>">Persönlichkeit löschen</a>
     </button>
   </body>
