@@ -3,6 +3,7 @@
 
 <?php
 require("dba.php");
+
 //Registrierungs logik
 if($_REQUEST['vorname']!=NULL && $_REQUEST['nachname']!= NULL && $_REQUEST['gebDat']!=NULL &&
     $_REQUEST['todDat']!=NULL && $_REQUEST['alter']!=NULL && $_REQUEST['furl']!=NULL &&
