@@ -107,20 +107,15 @@ $LID = $row['LID'];
                                 <label for="k3">Wissenschaft</label>
                             </div>
                             <div class="form-group">
-                                <input type="hidden" name="count" value="1" />
                                 <div class="control-group" id="fields">
                                     <label class="control-label" for="field1">Literatur:</label>
-                                    <div class="controls" id="profs">
-                                        <div id="field">
-                                            <input class="input form-control form-control-lit" id="ltitel1" name="ltitel" type="text" placeholder="Titel" value="<?=$row['titel']?>"/>
-                                            <input class="input form-control form-control-lit" id="lstadt1" name="lstadt" type="text"  placeholder="Stadt" value="<?=$row['stadt']?>"/>
-                                            <input class="input form-control form-control-lit" id="lverlag1" name="lverlag" type="text"  placeholder="Verlag" value="<?=$row['verlag']?>"/>
-                                            <input class="input form-control form-control-lit" id="lauflage1" name="lauflage" type="text"  placeholder="Auflage" value="<?=$row['auflage']?>"/>
-                                            <input class="input form-control form-control-lit" id="ljahr1" name="ljahr" type="text"  placeholder="Jahr" value="<?=$row['jahr']?>"/>
-                                            <input class="input form-control form-control-lit" id="lautor1" name="lautor" type="text"  placeholder="Autor" value="<?=$row['autor']?>"/>
-                                            <input class="input form-control form-control-lit" id="lseiten1" name="lseiten" type="text"  placeholder="Seiten" value="<?=$row['seiten']?>"/>
-                                        </div>
-                                    </div>
+                                            <input class="input form-control form-control-custom" id="ltitel1" name="ltitel" type="text" placeholder="Titel" value="<?=$row['titel']?>"/>
+                                            <input class="input form-control form-control-custom" id="lstadt1" name="lstadt" type="text"  placeholder="Stadt" value="<?=$row['stadt']?>"/>
+                                            <input class="input form-control form-control-custom" id="lverlag1" name="lverlag" type="text"  placeholder="Verlag" value="<?=$row['verlag']?>"/>
+                                            <input class="input form-control form-control-custom" id="lauflage1" name="lauflage" type="text"  placeholder="Auflage" value="<?=$row['auflage']?>"/>
+                                            <input class="input form-control form-control-custom" id="ljahr1" name="ljahr" type="text"  placeholder="Jahr" value="<?=$row['jahr']?>"/>
+                                            <input class="input form-control form-control-custom" id="lautor1" name="lautor" type="text"  placeholder="Autor" value="<?=$row['autor']?>"/>
+                                            <input class="input form-control form-control-custom" id="lseiten1" name="lseiten" type="text"  placeholder="Seiten" value="<?=$row['seiten']?>"/>
                                 </div>
                             </div>
                             <div class="form-group">
