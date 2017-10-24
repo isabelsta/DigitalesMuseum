@@ -7,8 +7,8 @@
 
 //Database access
 $sqlhost = "localhost";
-$sqluser = "david";
-$sqlpass = "david";
+$sqluser = "it";
+$sqlpass = "nemeku16";
 $dbname  = "museum";
 
 $my_db = mysqli_connect($sqlhost, $sqluser, $sqlpass, $dbname) or die ("DB-system nicht verfügbar");
