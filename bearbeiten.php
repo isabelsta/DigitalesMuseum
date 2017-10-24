@@ -16,7 +16,7 @@ $person = $_GET['PID'];
 //alle infos zur person in ein array laden
 $sql = "SELECT persoenlichkeit.PID, persoenlichkeit.vorname, persoenlichkeit.name, persoenlichkeit.geb, persoenlichkeit.tod,
                 persoenlichkeit.age, film.FID, film.titel, film.jahr, film.dauer, film.url,
-                zitat.quelle, zitat.inhalt, zitat.datum, text.TID, text.inhalt, literatur.titel, literatur.LID, literatur.stadt, literatur.verlag, 
+                zitat.quelle, zitat.inhalt, zitat.datum, text.TID, text.inhalt AS tinhalt, literatur.titel, literatur.LID, literatur.stadt, literatur.verlag, 
                 literatur.auflage, literatur.jahr, literatur.autor, literatur.seiten, bild.BID, bild.data, poster.POID, poster.data
                 FROM persoenlichkeit, hat_medium, bild, poster, film, zitat, gehoert_zu, kategorie, text, ueber, literatur
                 WHERE persoenlichkeit.PID = '".$person."'
@@ -87,7 +87,7 @@ $LID = $row['LID'];
                             </div>
                             <div class="form-group">
                                 <label for="text">Text: *</label>
-                                <textarea name="text" cols="35" rows="4" value="<?=$row['inhalt']?>" required></textarea>
+                                <textarea name="text" cols="35" rows="4" value="<?=$row['tinhalt']?>" required></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="poster">Poster:</label>
