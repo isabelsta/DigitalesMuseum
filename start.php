@@ -1,7 +1,6 @@
 <?php
 require("dba.php");
 session_start();
-
 //login check
 if(!isset($_SESSION['login'])){
     if ($_REQUEST['login']!=NULL && $_REQUEST['password']!=NULL) {
@@ -67,31 +66,29 @@ require("navbar.php");
         <?php
         require("dba.php");
         //auslesen aller poster in der datenbank, um im karussell darzustellen
-        $sql = "SELECT * FROM poster";
+        $sql = "SELECT PID FROM persoenlichkeit";
         $res = mysqli_query($my_db, $sql);
         $row = mysqli_fetch_all($res);
         foreach($row as $item){
-        ?>
+            ?>
 
-        <li data-target="#myCarousel" data-slide-to="<?=$item['0']?>"></li>
+            <li data-target="#myCarousel" data-slide-to="<?=$item['0']?>"></li>
         <?php } ?>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
-            <a href="personSelbst.php?PID=1">
-                <img src="poster.php?PID=1" width="60%" height="80%" style="margin:0 auto;">
-            </a>
+            <img src="katbild.php?KBID=4" width="60%" height="80%" style="margin:0 auto;">
         </div>
         <?php
-            foreach($row as $item){
-                ?>
-        <div class="item">
-            <a href="personSelbst.php?PID=<?=$item['0']?>">
-                <img src="poster.php?PID=<?=$item['0']?>" width="60%" height="80%" style="margin:0 auto;">
-            </a>
-        </div>
+        foreach($row as $item){
+            ?>
+            <div class="item">
+                <a href="personSelbst.php?PID=<?=$item['0']?>">
+                    <img src="poster.php?PID=<?=$item['0']?>" width="60%" height="80%" style="margin:0 auto;">
+                </a>
+            </div>
         <?php } ?>
     </div>
 
