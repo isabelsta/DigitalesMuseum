@@ -36,6 +36,9 @@
             FROM kategorie";
     $res = mysqli_query($my_db, $sql);
     $row = mysqli_fetch_all($res);
+    $sql2 = "SELECT KBID, data, typ, name FROM katbild";
+    $res2 = mysqli_query($my_db, $sql2);
+    $row2 = mysqli_fetch_all($res2);
     foreach ($row as $item) {
 
     ?>
@@ -43,7 +46,7 @@
       <div class="row">
           <div class="col-md-4">
               <a href="personen.php?KID=<?=$item['0']?>">
-                  <img src="sdp_klein.jpg" alt="Mein Bild" class="img-thumbnail" >
+                  <img src="katbild.php?KBID=<?=$item['0']?>" alt="Mein Bild" class="img-thumbnail" >
               </a>
               <h2 align="center"><?php printf("%s", $item['1']); ?> </h2>
           </div>
@@ -54,4 +57,4 @@
     </div>
   </body>
 </html>
-<?php } ?>
+<?php }  ?>
